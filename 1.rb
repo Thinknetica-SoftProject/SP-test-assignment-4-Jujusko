@@ -36,5 +36,5 @@ while ($start < $all_moves)
   end
   $start+=1
 end
-$floor +=1
+
 puts($floor)
