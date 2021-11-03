@@ -24,15 +24,11 @@ $start = 0
 $floor = 0
 $test1 = 0
 
-while ($start < $all_moves)
+while ($start <= $all_moves)
   if ($data[$start] == '(')
     $floor +=1
   else
-    if($floor == 0)
-      $floor = 0
-    else
       $floor-=1
-    end
   end
   $start+=1
 end
