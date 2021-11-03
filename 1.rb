@@ -26,7 +26,11 @@ while ($start < $all_moves)
   if ($data[$start] == '(')
     $floor +=1
   else
-    $floor-=1
+    if($floor == 0)
+      floor = 0
+    else
+      $floor-=1
+    end
   end
   $start+=1
 end
