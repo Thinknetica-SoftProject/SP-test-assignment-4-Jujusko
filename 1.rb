@@ -22,7 +22,7 @@ $data = File.open('data/1.txt', 'r'){ |file| file.read }
 $all_moves = $data.length
 $start = 0
 $floor = 0
-$test1 = 0
+$test1 = 1
 $test2 = 0
 while ($start <= $all_moves)
   if ($data[$start] == '(')
