@@ -23,14 +23,18 @@ $all_moves = $data.length
 $start = 0
 $floor = 0
 $test1 = 0
-
+$test2 = 0
 while ($start <= $all_moves)
   if ($data[$start] == '(')
-    $floor +=1
-  else
-      $floor-=1
+    $test1 +=1
+  else if ($data[$start] == ')')
+    $test2 +=1
+       end
   end
   $start+=1
 end
 
+#puts($test1)
+#puts($test2)
+$floor = $test1 - $test2
 puts($floor)
