@@ -22,6 +22,8 @@ $data = File.open('data/1.txt', 'r'){ |file| file.read }
 $all_moves = $data.length
 $start = 0
 $floor = 0
+$test1 = 0
+
 while ($start < $all_moves)
   if ($data[$start] == '(')
     $floor +=1
@@ -35,5 +37,5 @@ while ($start < $all_moves)
   end
   $start+=1
 end
-$floor -=1
+$floor +=1
 puts($floor)
