@@ -18,4 +18,16 @@
 
 
 
-
+$data = File.open('data/1.txt', 'r'){ |file| file.read }
+$all_moves = $data.length
+$start = 0
+$floor = 0
+while ($start < $all_moves)
+  if ($data[$start] == '(')
+    $floor +=1
+  else
+    $floor-=1
+  end
+  $start+=1
+end
+puts($floor)
