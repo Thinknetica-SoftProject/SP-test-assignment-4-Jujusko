@@ -27,7 +27,6 @@ $test1 = 0
 while ($start < $all_moves)
   if ($data[$start] == '(')
     $floor +=1
-    $floor +=1
   else
     if($floor == 0)
       $floor = 0
