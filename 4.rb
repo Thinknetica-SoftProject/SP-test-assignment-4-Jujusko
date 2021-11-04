@@ -27,7 +27,7 @@ fh.each do |line|
   width = str[2]
 
 
-  result += 2 * width * len + 2 * len * heig + 2 * heig * width + len * len
+  result += 2 * width * len + 2 * len * heig + 2 * heig * width + len * heig
   # puts len.to_s + " " + heig.to_s + " " + width.to_s
 end
 puts result
