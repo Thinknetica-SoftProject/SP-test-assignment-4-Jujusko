@@ -22,13 +22,12 @@ fh.each do |line|
   str = line.split("x").map { |s| s.to_i }
 
   str.sort!
-
   len = str[0]
   heig = str[1]
   width = str[2]
 
 
-  result += 2 * width * len + 2 * len * heig + 2 * len * width + len
+  result += 2 * width * len + 2 * len * heig + 2 * heig * width + len
   # puts len.to_s + " " + heig.to_s + " " + width.to_s
 end
 puts result
