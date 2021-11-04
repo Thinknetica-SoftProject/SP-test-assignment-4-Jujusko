@@ -16,4 +16,19 @@
 #
 ## Решение:
 
-
+fh = open "data/4.txt"
+result = 0
+fh.each do |line|
+  str = line.split("x").map { |s| s.to_i }
+  cnt = 0
+  min = str[0]
+  while (cnt < str.count)
+    if (min > str[cnt])
+      min = str[cnt]
+    end
+    cnt += 1
+  end
+  result += 2 * str[0] * str[1] + 2 * str[1] * str[2] + 2 * str[0] * str[2] + min
+end
+puts result
+fh.close
