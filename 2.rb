@@ -16,3 +16,34 @@
 #
 ## Решение:
 
+require 'digest'
+
+
+#$a = 1
+#$digest = Digest::MD5.hexdigest("#$gets#$a")
+#puts $digest[1]
+#puts $digest
+
+#5f8b62a2dced0cd28946a9c891ff3e5e
+#
+
+md5 = Digest::MD5.new
+
+str = gets.chomp
+cnt = 0
+while (1)
+  md5 = Digest::MD5.hexdigest(str + cnt.to_s)
+  str1 = md5.to_s
+  b = 5
+  while(b != 0)
+    b-=1
+    if (str1[b] != "0")
+      break
+    end
+  end
+  if (str1[b] == "0")
+    break
+  end
+  cnt += 1
+end
+puts cnt

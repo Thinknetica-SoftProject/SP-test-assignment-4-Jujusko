@@ -10,4 +10,4 @@
 #
 ## Решение:
 
-
+$data = File.open('data/1.txt', 'r'){ |file| file.read }

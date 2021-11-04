@@ -34,7 +34,5 @@ while ($start <= $all_moves)
   $start+=1
 end
 
-#puts($test1)
-#puts($test2)
 $floor = $test1 - $test2
 puts($floor)
