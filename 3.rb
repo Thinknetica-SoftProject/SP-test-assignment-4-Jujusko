@@ -10,4 +10,23 @@
 #
 ## Решение:
 
-$data = File.open('data/1.txt', 'r'){ |file| file.read }
+fh = open "data/3.txt"
+result = 0
+fh.each do |line|
+  str = line.split("\t").map { |s| s.to_i }
+  min_numb = str[0]
+  max_numb = str[0]
+  cnt = 0
+  while (cnt < str.count)
+    if(min_numb > str[cnt])
+      min_numb = str[cnt]
+    end
+    if (max_numb < str[cnt])
+      max_numb = str[cnt]
+    end
+    cnt+=1
+  end
+  result += max_numb - min_numb
+end
+puts result
+fh.close
