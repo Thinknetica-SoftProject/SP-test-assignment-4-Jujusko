@@ -15,20 +15,21 @@
 #
 #
 ## Решение:
-
+# Формула рассчета: 2*ш*д + 2*д*в + 2*в*ш + площадь наименьшей стороны
 fh = open "data/4.txt"
 result = 0
 fh.each do |line|
   str = line.split("x").map { |s| s.to_i }
-  cnt = 0
-  min = str[0]
-  while (cnt < str.count)
-    if (min > str[cnt])
-      min = str[cnt]
-    end
-    cnt += 1
-  end
-  result += 2 * str[0] * str[1] + 2 * str[1] * str[2] + 2 * str[0] * str[2] + min
+  str.sort
+  len = str[0]
+  heig = str[1]
+  width = str[2]
+
+
+  result += 2 * width * len + 2 * len * heig + 2 * len * width + len
+
 end
 puts result
 fh.close
+
+
