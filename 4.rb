@@ -20,14 +20,16 @@ fh = open "data/4.txt"
 result = 0
 fh.each do |line|
   str = line.split("x").map { |s| s.to_i }
-  str.sort
+
+  str.sort!
+
   len = str[0]
   heig = str[1]
   width = str[2]
 
 
   result += 2 * width * len + 2 * len * heig + 2 * len * width + len
-
+  # puts len.to_s + " " + heig.to_s + " " + width.to_s
 end
 puts result
 fh.close
